@@ -12,8 +12,9 @@ module.exports = function() {
     }
 
     var js = yate.compile(this.resourcePath).js;
+    var filename = path.basename(this.resourcePath, '.yate');
 
-    return 'exports["yate-' + path.basename(this.resourcePath, '.yate') + '"] = (function(){' + js + '})();';
+    return 'exports["yate-' + filename + '"] = (function(){' + js + '})();';
 
 };
 
