@@ -16,7 +16,9 @@ module.exports = function() {
     var js = yate.compile(this.resourcePath).js;
     var filename = path.basename(this.resourcePath, '.yate');
 
-    return 'exports["yate-' + filename + '"] = (function(){' + js + '})();';
+    js = js.replace(/\(yr\.externals\[\'i18n\'\]\)/ig, 'i18n');
+
+    return 'exports["yate-' + filename + '"] = (function(){' + js.slice(47) + '})();';
 
 };
 
