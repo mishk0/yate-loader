@@ -4,6 +4,8 @@ var path = require('path');
 var querystring = require('querystring');
 
 module.exports = function() {
+    this.cacheable();
+
     if (this.query) {
         var parsedQuery = querystring.parse(this.query.slice(1));
         var commonPath = parsedQuery.common;
