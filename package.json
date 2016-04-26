@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Mikhail Mokrushin",
+    "email": "mokrushin.ms@ya.ru"
+  },
+  "license": "MIT",
   "dependencies": {
     "yate": "0.0.79"
   }
